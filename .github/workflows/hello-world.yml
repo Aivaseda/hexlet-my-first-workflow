@@ -4,5 +4,9 @@ jobs:
   build:
      runs-on: ubuntu-latest
      steps:
-       - run: make say-hello
+      - uses: gradle/gradle-build-action@v2
+        with:
+         gradle-version: 8.5
+      - run: make say-hello
+       
        
